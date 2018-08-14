@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>SIGAA - Monitoria</title>
+  <link rel="shortcut icon" href="icon.ico">
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/solid.css" integrity="sha384-Rw5qeepMFvJVEZdSo1nDQD5B6wX0m7c5Z/pLNvjkB14W6Yki1hKbSEQaX9ffUbWe"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV"
+    crossorigin="anonymous">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    .backgroundColuna1 {
+      background-color: #FFA500
+    }
+
+    .backgroundfundo {
+      background-color: #87CEFA
+    }
+
+    .marg {
+      margin-top: 13px;
+    }
+
+    .marg2 {
+      margin-top: 22px;
+    }
+
+    .cor {
+      color: green;
+    }
+  </style>
+</head>
+
+<body class="backgroundfundo">
+  <div class="container-fluid">
+    <div class="row backgroundColuna1">
+      <div class="col-sm-offset-1 col-sm-1">
+        <img src="http://prints.ultracoloringpages.com/38eca0e84388e1d59586a23531c1e138.png" style="width:80px;height:75px" alt="notebook">
+      </div>
+      <div class="col-sm-6">
+        <h2>SIGAA - Monitoria</h2>
+      </div>
+      <div class="col-sm-offset-3 col-sm-1">
+        <a class="marg btn btn-primary btn-md" href="inicioMonitor.html" role="button">
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </a>
+
+        <a class="marg btn btn-danger btn-md" href="index.html" role="button">
+          <i class="glyphicon glyphicon-remove"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-offset-1 col-sm-5">
+        <div class="row">
+          <div class="col-sm-10">
+            <h3 class="text-center">
+              <strong>Enviar arquivo</strong>
+            </h3>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-sm-10">
+            <label for="assunto" class="label-control">Assunto:</label>
+            <input id="assunto" type="text" class="form-control" name="assunto" placeholder="Digite aqui">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-10">
+            <label for="autor" class="label-control">Autor:</label>
+            <input id="autor" type="text" class="form-control" name="autor" placeholder="Digite aqui">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-10">
+            <label for="data" class="label-control">Data de envio:</label>
+            <input id="data" type="date" class="form-control" name="date">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-10">
+            <h5>Escolha um arquivo para enviar para a biblioteca:</h5>
+            <input type="file" />
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-10">
+            <label for="comentario" class="label-control">Adicionar comentário:</label>
+            <textarea id="comentario" name="comentario" rows="3" cols="88" maxlength="200" wrap="hard" placeholder="Digite aqui">
+                  </textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-3">
+            <button class="marg btn btn-primary btn-lg btn-block" value="enviarArquivo" data-toggle="modal" data-target="#myModal">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar</button>
+          </div>
+          <div class=" col-sm-3">
+              <a class="marg btn btn-block btn-warning btn-lg" href="bibliotecaMonitor.html" role="button"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar</a>
+          </div>
+        </div>
+
+      <!-- Modal enviar arquivo-->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Envio concluído</h4>
+              </div>
+              <div class="modal-body">
+                <p class="cor">Seu arquivo foi enviado com sucesso.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-offset-1 col-sm-5 marg2">
+        <div class="row">
+          <div class="col-sm-offset-1 col-sm-9 well">
+            <div class="row">
+              <div class=" col-sm-5">
+                <img src="https://medizzy.com/_nuxt/img/user-placeholder.d2a3ff8.png" class="img-circle person displayed" alt="aluno">
+              </div>
+              <div class=" col-sm-offset-2 col-sm-5">
+                <h4>Dados do monitor:</h4>
+                <br>
+                <label class="control-label">Michelle Vieira Silva</label>
+                <br>
+                <label class="control-label">4° ano</label>
+                <br>
+                <label class="control-label">Informática</label>
+                <br>
+                <label class="control-label">Vesperino</label>
+                <br>
+                <a class="control-label" href="#">Editar perfil</a>
+                <br>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
+</html>

@@ -8,6 +8,7 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>SIGAA - Monitoria</title>
   <link rel="shortcut icon" href="icon.ico">
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
@@ -22,20 +23,19 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+</head>
+
+<body class="backgroundfundo">
   <style>
     .backgroundColuna1 {
       background-color: #FFA500
     }
 
     .backgroundfundo {
-      background-image: url(background.png);
-
+      background-image: url(background.png)
     }
-    .marg{
-        margin-top:250px;
-      }
     .g{
-      background-color:	#F0FFFF	
+      background-color:	#F0FFFF
     }
     .bordas{
       border-color: #FFA500;
@@ -43,14 +43,13 @@
       border-style: solid;
       border-radius: 10px;
     }
-
+    .marg {
+      margin: 200px;
+    }
   </style>
-</head>
-
-<body class="backgroundfundo">
-  <div class="marg container-fluid">
+  <div class="container-fluid marg">
     <div class="row">
-      <div class= "g bordas col-sm-offset-4 col-sm-4">
+      <div class="g bordas col-sm-offset-3 col-sm-6">
         <div class="row backgroundColuna1">
           <div class="col-sm-offset-2 col-sm-2">
             <img src="http://prints.ultracoloringpages.com/38eca0e84388e1d59586a23531c1e138.png" style="width:80px;height:75px" alt="notebook">
@@ -61,32 +60,37 @@
         </div>
 
         <br>
-        <div class="row ">
-          <div class="col-sm-offset-4 col-sm-4">
-            <h3 class="text-center">Entrar como:</h3>
-          </div>
-        </div>
-        <br>
-
         <div class="row">
           <div class="col-sm-offset-3 col-sm-6">
-            <a class="btn btn-block btn-warning btn-lg" href="monitorLogin.html" role="button">MONITOR</a>
+            <h4 class="text-center">Entrar no sistema:</h4>
           </div>
         </div>
         <br>
+        <form action="inicioMonitor.html">
+          <div class="form-group">
+            <label for="loginMonitor" class="label-control">Login:</label>
+            <input id="loginMonitor" name="loginMonitor" type="text" class="form-control" placeholder="emanuellefeitosa" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="senhaMonitor" class="label-control">Senha:</label>
+            <input id="senhaMonitor" name="senhaMonitor" type="password" class="form-control" placeholder="**********" required>
+          </div>
+
+          <div class="form-group">
+            <input id="check1" type="checkbox" name="check1">
+            <label for="check1" class="label-control">Lembre de mim</label>
+          </div>
+        <br>
         <div class="row">
-            <div class="col-sm-offset-3 col-sm-6">
-                <a class="btn btn-block btn-warning btn-lg" href="alunoLogin.html" role="button">ALUNO</a>
-                <br>
-                <br>
-            </div>
+          <div class="col-sm-offset-3 col-sm-6">
+            <button class="btn btn-block btn-warning btn-lg" type="Submit" value="entrarMonitor">Entrar</button>
+            <br><br>
+          </div>
         </div>
+      </form>
       </div>
     </div>
-
-
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->

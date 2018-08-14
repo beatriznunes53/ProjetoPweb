@@ -64,9 +64,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <br>
-                        <p><strong>Disciplina:</strong> Introdução à programação</p>
-                        <p><strong>Monitor:</strong> Emanuelle Melo O. Feitosa</p>
-                        <p><strong>Professor-orientador:</strong> Emerson Ferreira de A. Lima</p>
+                        <p><strong>Disciplina:</strong><span id="nomeDisc"> Introdução à programação</span></p>
+                        <p><strong>Monitor:</strong><span id="nomeMoni"> Emanuelle Melo O. Feitosa</span></p>
+                        <p><strong>Professor-orientador:</strong><span id="nomeOri"> Emerson Ferreira de A. Lima</span></p>
                         <h4>Horário:</h4>
                     </div>
                 </div>
@@ -88,23 +88,23 @@
                                 <td class="text-center">
                                     <strong>Dia</strong>
                                 </td>
-                                <td class="text-center">---</td>
-                                <td class="text-center">8h às 12h</td>
-                                <td class="text-center">8h às 12h</td>
-                                <td class="text-center">8h às 12h</td>
-                                <td class="text-center">---</td>
+                                <td class="text-center"><span id="horarioSeg">---</span></td>
+                                <td class="text-center"><span id="horarioTer">8h às 12h</span></td>
+                                <td class="text-center"><span id="horarioQua">8h às 12h</span></td>
+                                <td class="text-center"><span id="horarioQui">8h às 12h</span></td>
+                                <td class="text-center"><span id="horarioSex">---</span></td>
                                 </tr>
                                 <tr class="warning">
                                 <td class="text-center">
                                     <strong>Local</strong>
                                 </td>
-                                <td class="text-center">---</td>
-                                <td class="text-center">Laboratório 66</td>
-                                <td class="text-center">Laboratório 66</td>
-                                <td class="text-center">Laboratório 66</td>
-                                <td class="text-center">---</td>
+                                <td class="text-center"><span id="localSeg">---</span></td>
+                                <td class="text-center"><span id="localTer">Laboratório 66</span></td>
+                                <td class="text-center"><span id="localQua">Laboratório 66</span></td>
+                                <td class="text-center"><span id="localQui">Laboratório 66</span></td>
+                                <td class="text-center"><span id="localSex">---</span></td>
                                 </tr>
-        
+
                             </tbody>
                             </table>
                     </div>
@@ -156,58 +156,6 @@
 
 
     </div>
-        <!--Modal horário-->
-        <div id="modalHorario" class="modal fade" role="dialog">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">HORÁRIO</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-sm-offset-2 col-sm-8">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr class="danger">
-                          <th class="text-center">#</th>
-                          <th class="text-center">Segunda</th>
-                          <th class="text-center">Terça</th>
-                          <th class="text-center">Quarta</th>
-                          <th class="text-center">Quinta</th>
-                          <th class="text-center">Sexta</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="warning">
-                          <td class="text-center">
-                            <strong>Horário</strong>
-                          </td>
-                          <td class="text-center"><span id="horarioSeg">---</span></td>
-                          <td class="text-center">8h às 12h</td>
-                          <td class="text-center">8h às 12h</td>
-                          <td class="text-center">8h às 12h</td>
-                          <td class="text-center">---</td>
-                        </tr>
-                        <tr class="warning">
-                          <td class="text-center">
-                            <strong>Local</strong>
-                          </td>
-                          <td class="text-center">---</td>
-                          <td class="text-center">Laboratório 66</td>
-                          <td class="text-center">Laboratório 66</td>
-                          <td class="text-center">Laboratório 66</td>
-                          <td class="text-center">---</td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
 <!-- Modal Fórum -->
         <div id="modalForum" class="modal fade" role="dialog">
@@ -223,8 +171,8 @@
                                     <form action="#">
                                         <div class="form-group">
                                             <div class="col-sm-offset-1 col-sm-10">
-                                            <p><strong>Monitor:</strong> Emanuelle Melo O. Feitosa</p>
-                                            <p><strong>Professor-orientador:</strong> Emerson F. de A. Lima</p>
+                                            <p><strong>Monitor:</strong><span id="nomeMoniF"> Emanuelle Melo O. Feitosa</span></p>
+                                            <p><strong>Professor-orientador:</strong><span id="nomeOriF"> Emerson F. de A. Lima</span></p>
                                             <br>
                                             </div>
                                             <div class="col-sm-offset-1 col-sm-10">
@@ -233,7 +181,7 @@
                                                 <br>
                                             </div>
                                         </div>
-                    
+
                                         <div class="form-group">
                                             <div class="col-sm-offset-1 col-sm-10">
                                                 <label class="control-label" for="duvida">Duvida:</label>
@@ -264,20 +212,82 @@
             <!-- Latest compiled and minified JavaScript -->
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
               crossorigin="anonymous"></script>
-            
+
               <script>
                   var parametros= new URLSearchParams(window.location.search);
                   var monitor = parametros.get('monitor');
                     var horarioSeg = '---';
+                    var horarioTer = '8h - 12h';
+                    var horarioQua = '8h - 12h';
+                    var horarioQui = '8h - 12h';
+                    var horarioSex = '---';
+
+                    var localSeg = '---';
+                    var localTer = 'Laboratório 66';
+                    var localQua = 'Laboratório 66';
+                    var localQui = 'Laboratório 66';
+                    var localSex = '---';
+
+                    var nomeDisc = ' Introdução à Programação';
+                    var nomeMoni = ' Emanuelle Melo O. Feitosa';
+                    var nomeOri = ' Emerson F. de A. Lima';
+                    var nomeMoniF = ' Emanuelle Melo O. Feitosa';
+                    var nomeOriF = ' Emerson F. de A. Lima';
 
                     if (monitor==='1'){
-                        horarioSeg='8h - 12h';
+                        horarioSeg = '8h - 12h';
+                        horarioTer = '8h - 12h';
+                        horarioQua = '8h - 12h';
+                        horarioQui = '---';
+                        horarioSex = '---';
+                        localSeg = 'Laboratório 66';
+                        localTer = 'Laboratório 66';
+                        localQua = 'Laboratório 66';
+                        localQui = '---';
+                        localSex = '---';
+                        nomeDisc = ' Matemática';
+                        nomeMoni = ' Anielly Oliveira Santos';
+                        nomeOri = ' José Ivan Lins'
+                        nomeMoniF = ' Anielly Oliveira Santos';
+                        nomeOriF = ' José Ivan Lins'
+
                     }
                     else if (monitor==='2'){
                         horarioSeg='13h - 17h';
+                        horarioTer = '---';
+                        horarioQua = '13h - 17h';
+                        horarioQui = '---';
+                        horarioSex = '13h - 17h';
+                        localSeg = 'Laboratório 66';
+                        localTer = '---';
+                        localQua = 'Laboratório 66';
+                        localQui = '---';
+                        localSex = 'Laboratório 66';
+                        nomeDisc = ' Matemática';
+                        nomeMoni = ' Ana Beatriz F. Nunes';
+                        nomeOri = ' José Ivan Lins'
+                        nomeMoniF = ' Ana Beatriz F. Nunes';
+                        nomeOriF = ' José Ivan Lins'
                     }
-                    console.log(horarioSeg);
+
+
                     document.getElementById('horarioSeg').textContent = horarioSeg;
+                    document.getElementById('horarioTer').textContent = horarioTer;
+                    document.getElementById('horarioQua').textContent = horarioQua;
+                    document.getElementById('horarioQui').textContent = horarioQui;
+                    document.getElementById('horarioSex').textContent = horarioSex;
+
+                    document.getElementById('localSeg').textContent = localSeg;
+                    document.getElementById('localTer').textContent = localTer;
+                    document.getElementById('localQua').textContent = localQua;
+                    document.getElementById('localQui').textContent = localQui;
+                    document.getElementById('localSex').textContent = localSex;
+
+                    document.getElementById('nomeDisc').textContent = nomeDisc;
+                    document.getElementById('nomeMoni').textContent = nomeMoni;
+                    document.getElementById('nomeOri').textContent = nomeOri;
+                    document.getElementById('nomeMoniF').textContent = nomeMoniF;
+                    document.getElementById('nomeOriF').textContent = nomeOriF;
 
               </script>
 

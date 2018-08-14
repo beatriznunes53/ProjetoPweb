@@ -67,8 +67,8 @@
                 <form action="#">
                     <div class="form-group">
                       <div class="col-sm-offset-1 col-sm-10">
-                        <p><strong>Monitor:</strong> Emanuelle Melo O. Feitosa</p>
-                        <p><strong>Professor-orientador:</strong> Emerson F. de A. Lima</p>
+                        <p><strong>Monitor:</strong><span id="nomeMoni"> Emanuelle Melo O. Feitosa</span></p>
+                        <p><strong>Professor-orientador:</strong><span id="nomeOri"> Emerson F. de A. Lima</span></p>
                         <br>
                       </div>
                         <div class="col-sm-offset-1 col-sm-10">
@@ -155,13 +155,35 @@
                   </div>
                 </div>
               </div>
-    </div>
+            </div>
+      </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
       crossorigin="anonymous"></script>
-  </div>
+    <script>
+        var parametros= new URLSearchParams(window.location.search);
+        var monitor = parametros.get('monitor');
+
+          var nomeMoni = '---';
+          var nomeOri = '---';
+
+          if (monitor==='1'){
+              nomeMoni = ' Anielly Oliveira Santos';
+              nomeOri = ' José Ivan Lins'
+
+          }
+          else if (monitor==='2'){
+              nomeMoni = ' Ana Beatriz F. Nunes';
+              nomeOri = ' José Ivan Lins'
+          }
+
+          document.getElementById('nomeMoni').textContent = nomeMoni;
+          document.getElementById('nomeOri').textContent = nomeOri;
+
+
+    </script>
 </body>
 
 </html>
